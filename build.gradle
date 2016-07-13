@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.3.5.RELEASE'
     }
 }
 
@@ -13,29 +13,36 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
-jar {
-    baseName = 'gs-spring-boot'
-    version =  '0.1.0'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    guavaVersion = '19.0'
+    jadiraVersion = '4.0.0.GA'
+    swaggerVersion = '2.3.0'
 }
+
 
 repositories {
     jcenter()
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 dependencies {
-    // tag::jetty[]
-    compile("org.springframework.boot:spring-boot-starter-web") {
-        exclude module: "spring-boot-starter-tomcat"
-    }
-    compile("org.springframework.boot:spring-boot-starter-jetty")
-    // end::jetty[]
-    // tag::actuator[]
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    // end::actuator[]
-    testCompile("junit:junit")
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+
+    compile group: 'org.springframework', name: 'spring-context-support'
+
+    compile group: 'joda-time', name: 'joda-time'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-joda'
+    compile group: 'com.google.guava', name: 'guava', version: guavaVersion
+    compile group: 'org.jadira.usertype', name: 'usertype.extended', version: jadiraVersion
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: swaggerVersion
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: swaggerVersion
+
+    runtime group: 'org.hsqldb', name: 'hsqldb'
+    runtime group: 'mysql', name: 'mysql-connector-java'
 }
 
 task wrapper(type: Wrapper) {
