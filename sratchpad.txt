@@ -1,0 +1,36 @@
+* = implemented
+- = not yet implemented
+
+TODOS
+=====
+- Include swagger
+
+
+STORIES
+=======
+- As a REST client, I can log in to the application
+- As a REST client, I can log out from the application
+- As a REST client, when I login, data should be persistent
+
+* As a REST client, I can CRUDL a product category
+- As a REST client, I can CRUDL a product
+
+
+ENDPOINTS (for now until swagger is added)
+==========
+Categories:
+* GET /api/categories
+* POST /api/categories
+* GET /api/categories/{id}
+* PUT /api/categories/{id}
+* DELETE /api/categories/{id}
+
+Products:
+- GET /api/categories/{id}/products/
+- POST /api/categories/{id}/products
+- GET /api/categories/{id}/products/{id}
+- PUT /api/categories/{id}/products/{id}
+- DELETE /api/categories/{id}/products/{id}
+
+NOTES
+=====
