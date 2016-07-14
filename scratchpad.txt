@@ -4,8 +4,8 @@
 TODOS
 =====
 - Include swagger
-- Add some tests
-- Hook up Travisci
+* Add some basic tests
+* Hook up Travisci
 * Hook up Heroku
 
 
