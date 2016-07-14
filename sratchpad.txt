@@ -6,7 +6,7 @@ TODOS
 - Include swagger
 - Add some tests
 - Hook up Travisci
-- Hook up Heroku
+* Hook up Heroku
 
 
 STORIES
@@ -34,6 +34,3 @@ Products:
 - GET /api/categories/{id}/products/{id}
 - PUT /api/categories/{id}/products/{id}
 - DELETE /api/categories/{id}/products/{id}
-
-NOTES
-=====
