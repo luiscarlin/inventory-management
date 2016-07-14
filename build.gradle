@@ -48,3 +48,17 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
+
+task stage(type: Copy, dependsOn: [clean, build]) {
+    from jar.archivePath
+    into "${rootDir}/target"
+    rename {
+        'app.jar'
+    }
+}
+stage.mustRunAfter(clean)
+
+clean {
+    delete "${rootDir}/target/"
+}
+

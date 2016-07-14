@@ -4,6 +4,9 @@
 TODOS
 =====
 - Include swagger
+- Add some tests
+- Hook up Travisci
+- Hook up Heroku
 
 
 STORIES
