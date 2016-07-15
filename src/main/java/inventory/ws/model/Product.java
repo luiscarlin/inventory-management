@@ -12,15 +12,6 @@ public class Product {
     private Long id;
     private String name;
     private String description;
-    private Long quantity;
-
-    public Long getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Long quantity) {
-        this.quantity = quantity;
-    }
 
     public Product() {
     }
