@@ -1,20 +1,20 @@
 package inventory.ws.service;
 
-        import inventory.ws.model.Category;
-        import inventory.ws.repository.CategoryRepository;
-        import org.slf4j.Logger;
-        import org.slf4j.LoggerFactory;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.cache.annotation.CacheEvict;
-        import org.springframework.cache.annotation.CachePut;
-        import org.springframework.cache.annotation.Cacheable;
-        import org.springframework.stereotype.Service;
-        import org.springframework.transaction.annotation.Propagation;
-        import org.springframework.transaction.annotation.Transactional;
+import inventory.ws.model.Category;
+import inventory.ws.repository.CategoryRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-        import javax.persistence.EntityExistsException;
-        import javax.persistence.NoResultException;
-        import java.util.Collection;
+import javax.persistence.EntityExistsException;
+import javax.persistence.NoResultException;
+import java.util.Collection;
 
 @Service
 @Transactional(
