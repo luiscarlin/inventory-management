@@ -23,7 +23,7 @@ public class Application {
 
     @Bean
     public CacheManager cacheManager() {
-        GuavaCacheManager cacheManager = new GuavaCacheManager("categories");
+        GuavaCacheManager cacheManager = new GuavaCacheManager("categories", "products");
 
         return cacheManager;
     }
