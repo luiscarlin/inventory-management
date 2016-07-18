@@ -3,6 +3,7 @@ package inventory.ws.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Collection;
 
 @Entity
 public class Category {
@@ -12,6 +13,7 @@ public class Category {
     private Long id;
     private String name;
     private String description;
+    private Collection<Product> products;
 
     public Category() {
     }
@@ -37,5 +39,9 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Collection<Product> getProducts() {
+        return products;
     }
 }
